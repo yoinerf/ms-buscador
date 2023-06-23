@@ -1,7 +1,6 @@
 package com.unir.buscador.controllers;
 
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.unir.buscador.models.CreateMovieRequest;
 import com.unir.buscador.models.MovieModel;
 import com.unir.buscador.services.MoviesService;

@@ -19,7 +19,7 @@ public class MovieServiceImp implements MoviesService {
 
     @Override
     public List<MovieModel> getMovies(String name, String synopsis, String director, String genres) {
-        List<MovieModel> movies = repository.findProducts(name, synopsis, director, genres);
+        List<MovieModel> movies = repository.findMovies(name, synopsis, director, genres);
         return movies.isEmpty() ? null : movies;
     }
 

@@ -34,15 +34,15 @@ public class DataAccessRepository {
         return movieRepository.save(movie);
     }
 
-    public Boolean delete(MovieModel movie) {
-        return movieRepository.delete(movie);
+    public void delete(MovieModel movie) {
+        movieRepository.delete(movie);
     }
 //    public Boolean delete(MovieModel movie) {
 //        movieRepository.delete(movie);
 //        return Boolean.TRUE;
 //    }
 
-    public List<MovieModel> findProducts(String name, String synopsis, String director, String genres) {
+    public List<MovieModel> findMovies(String name, String synopsis, String director, String genres) {
 
         BoolQueryBuilder querySpec = QueryBuilders.boolQuery();
 
