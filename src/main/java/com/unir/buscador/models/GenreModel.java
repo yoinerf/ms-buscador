@@ -18,7 +18,7 @@ public class GenreModel {
     @Id
     private String id;
 
-    @Field(type = FieldType.Keyword, name = "name")
+    @Field(type = FieldType.Text, name = "name")
     private String name;
 
 

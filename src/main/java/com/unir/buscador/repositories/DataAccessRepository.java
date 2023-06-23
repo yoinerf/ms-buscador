@@ -35,9 +35,12 @@ public class DataAccessRepository {
     }
 
     public Boolean delete(MovieModel movie) {
-        movieRepository.delete(movie);
-        return Boolean.TRUE;
+        return movieRepository.delete(movie);
     }
+//    public Boolean delete(MovieModel movie) {
+//        movieRepository.delete(movie);
+//        return Boolean.TRUE;
+//    }
 
     public List<MovieModel> findProducts(String name, String synopsis, String director, String genres) {
 

@@ -14,7 +14,7 @@ public interface MovieRepository extends ElasticsearchRepository<MovieModel, Str
 
     MovieModel save(MovieModel movie);
 
-    void delete(MovieModel movie);
+    boolean delete(MovieModel movie);
 
     List<MovieModel> findAll();
 

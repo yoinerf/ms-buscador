@@ -57,57 +57,6 @@ public class MovieServiceImp implements MoviesService {
         movie.setGenres(genres);
         return repository.save(movie);
 
-//        List<GenreModel> genres = new ArrayList<>();
-//        for (GenreModel movieGenre : request.getGenres()) {
-//            GenreModel genre = new GenreModel();
-//            genre.setId(movieGenre.getId());
-//            genre.setName(movieGenre.getName());
-//            genres.add(genre);
-//        }
-
-//        List<GenreModel> genres = new ArrayList<>();
-//        for (GenreModel MovieGenres : request.getGenres()) {
-//            GenreModel genre = repository.findGenreById(MovieGenres.getId())
-//                    .orElseThrow(() -> new RuntimeException("Género no encontrado"));
-//            genres.add(genre);
-//        }
-
-//        List<Map<String, Integer>> genres = new ArrayList<>();
-//        for (GenreModel movieGenre : request.getGenres()) {
-//            Optional<GenreModel> optionalGenre = repository.findGenreById(movieGenre.getId());
-//            if (optionalGenre.isPresent()) {
-//                Map<String, Integer> genreMap = new HashMap<>();
-//                genreMap.put("id", Integer.valueOf(movieGenre.getId()));
-//                genres.add(genreMap);
-//            } else {
-//                throw new RuntimeException("Género no encontrado");
-//            }
-//        }
-//// Convierte la lista de mapas a una representación JSON
-//        String genresJson = new ObjectMapper().writeValueAsString(genres);
-
-
-
-
-//        List<String> genres = new ArrayList<>();
-//        for (GenreModel movieGenre : request.getGenres()) {
-//            Optional<GenreModel> optionalGenre = repository.findGenreById(movieGenre.getId());
-//            if (optionalGenre.isPresent()) {
-//                String genreId = movieGenre.getId();
-//                genres.add(genreId);
-//            } else {
-//                throw new RuntimeException("Género no encontrado");
-//            }
-//        }
-
-
-//        List<String> genres = new ArrayList<>();
-//        for (GenreModel movieGenre : request.getGenres()) {
-//            String genre = String.valueOf(repository.findGenreById(movieGenre.getId())
-//                    .orElseThrow(() -> new RuntimeException("Género no encontrado")));
-//                genres.add(genre);
-//        }
-
     }
 
     @Override
