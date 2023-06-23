@@ -1,37 +1,37 @@
 ## Configuracion de Spring
-spring:
-  application:
-    name: ms-buscador-peliculas
-  datasource:
-    url: jdbc:mysql://localhost:3306/dbbuscador
-    username: root
-    password: 123456
-    driver-class-name: com.mysql.cj.jdbc.Driver
-  jpa:
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQL5Dialect
-    show-sql: true
+#spring:
+#  application:
+#    name: ms-buscador-peliculas
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/dbbuscador
+#    username: root
+#    password: 123456
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#  jpa:
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.MySQL5Dialect
+#    show-sql: true
 
 ## Configuracion de Instancia
-server:
-  port: 8087
+#server:
+#  port: 8087
 
 ## Configuracion del cliente de Eureka
-eureka:
-  instance:
-    preferIpAddress: false
-    hostname: ${HOSTNAME:ms-buscador-production-movies.up.railway.app}
-    non-secure-port-enable: false
-    secure-port-enable: true
-    non-secure-port: 80
-    secure-port: 443
-
-  client:
-    registerWithEureka: true
-    fetchRegistry: true
-    serviceUrl:
-      defaultZone: ${EUREKA_URL:https://eureka-production-movies.up.railway.app/eureka}
+#eureka:
+#  instance:
+#    preferIpAddress: false
+#    hostname: ${HOSTNAME:ms-buscador-production-movies.up.railway.app}
+#    non-secure-port-enable: false
+#    secure-port-enable: true
+#    non-secure-port: 80
+#    secure-port: 443
+#
+#  client:
+#    registerWithEureka: true
+#    fetchRegistry: true
+#    serviceUrl:
+#      defaultZone: ${EUREKA_URL:https://eureka-production-movies.up.railway.app/eureka}
 
 
     ##Elasticsearch config
