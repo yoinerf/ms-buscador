@@ -1,0 +1,38 @@
+## Configuracion de Spring
+spring:
+  application:
+    name: ms-buscador-peliculas
+  datasource:
+    url: jdbc:mysql://localhost:3306/dbbuscador
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+    show-sql: true
+
+## Configuracion de Instancia
+server:
+  port: 8087
+
+## Configuracion del cliente de Eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_URL:http://172.17.0.3:8761/eureka}
+  instance:
+    preferIpAddress: true
+    hostname: ms-buscador-peliculas
+
+
+    ##Elasticsearch config
+#    elasticsearch:
+#      host: ${ELASTICSEARCH_HOST}
+#      credentials:
+#        user: ${ELASTICSEARCH_USER}
+#        password: ${ELASTICSEARCH_PWD}
+#    logging:
+#      level:
+#        tracer: TRACE
