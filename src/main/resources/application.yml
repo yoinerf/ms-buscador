@@ -1,17 +1,17 @@
 ## Configuracion de Spring
-#spring:
+spring:
 #  application:
 #    name: ms-buscador-peliculas
-#  datasource:
-#    url: jdbc:mysql://localhost:3306/dbbuscador
-#    username: root
-#    password: 123456
-#    driver-class-name: com.mysql.cj.jdbc.Driver
-#  jpa:
-#    properties:
-#      hibernate:
-#        dialect: org.hibernate.dialect.MySQL5Dialect
-#    show-sql: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/dbbuscador
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+    show-sql: true
 
 ## Configuracion de Instancia
 #server:
