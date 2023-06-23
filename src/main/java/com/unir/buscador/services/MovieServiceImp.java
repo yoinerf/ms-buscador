@@ -1,7 +1,5 @@
 package com.unir.buscador.services;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.unir.buscador.models.CreateMovieRequest;
 import com.unir.buscador.models.GenreModel;
 import com.unir.buscador.models.MovieModel;
@@ -32,7 +30,7 @@ public class MovieServiceImp implements MoviesService {
 
 
     @Override
-    public MovieModel createMovie(CreateMovieRequest request) throws JsonProcessingException {
+    public MovieModel createMovie(CreateMovieRequest request)  {
         MovieModel movie = new MovieModel();
         movie.setId(request.getId_Movie());
         movie.setName(request.getName());

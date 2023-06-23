@@ -14,6 +14,6 @@ public interface MoviesService {
 
     Boolean removeMovie(String movie_Id);
 
-    MovieModel createMovie(CreateMovieRequest request) throws JsonProcessingException;
+    MovieModel createMovie(CreateMovieRequest request);
 
 }

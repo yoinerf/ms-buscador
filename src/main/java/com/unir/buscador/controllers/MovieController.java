@@ -57,7 +57,7 @@ public class MovieController {
 
     //CREAR
     @PostMapping("/movies")
-    public ResponseEntity<MovieModel> createMovie(@RequestBody CreateMovieRequest request) throws JsonProcessingException {
+    public ResponseEntity<MovieModel> createMovie(@RequestBody CreateMovieRequest request) {
 
 
         MovieModel createdMovieModel = service.createMovie(request);
