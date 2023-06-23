@@ -21,10 +21,14 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: ${EUREKA_URL:http://172.17.0.3:8761/eureka}
+      defaultZone: ${EUREKA_URL:https://eureka-production-movies.up.railway.app/eureka}
   instance:
     preferIpAddress: true
-    hostname: ms-buscador-peliculas
+    hostname: ms-buscador-production-movies.up.railway.app
+    non-secure-port-enabled: false
+    secure-port-enabled: true
+    non-secure-port: 80
+    secure-port: 443
 
 
     ##Elasticsearch config
