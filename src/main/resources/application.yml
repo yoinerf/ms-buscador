@@ -19,16 +19,19 @@ server:
 
 ## Configuracion del cliente de Eureka
 eureka:
-  client:
-    service-url:
-      defaultZone: ${EUREKA_URL:https://eureka-production-movies.up.railway.app/eureka}
   instance:
-    preferIpAddress: true
-    hostname: ms-buscador-production-movies.up.railway.app
-    non-secure-port-enabled: false
-    secure-port-enabled: true
+    preferIpAddress: false
+    hostname: ${HOSTNAME:ms-buscador-production-movies.up.railway.app}
+    non-secure-port-enable: false
+    secure-port-enable: true
     non-secure-port: 80
     secure-port: 443
+
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: ${EUREKA_URL:https://eureka-production-movies.up.railway.app/eureka}
 
 
     ##Elasticsearch config
